@@ -12,6 +12,11 @@
     <src="https:/use.fontawesome.com/releases/v5.5.0/js/all.js"></>
 </head>
 <body>
+        <!-- Parte para mostrar a mensagem de validação  -->
+        <div class="resp">
+           <!-- <div class="erros"><p>Preencha todos os campos obrigatórios!</p></div>-->
+       <!-- <div class="ok"><p>Sucesso!</p></div>  Fim mensagem de validação  --> 
+        </div>
 
         <div class="main">      
                <!--Cabeçaçho com logo-->
@@ -19,27 +24,37 @@
                     <a href="./index.html"><img src="img/docMaker2.png" ></a>
                 </div><!--Fim Cabeçalho-->
 
-                <form class="formulario" id="form">
+                <form class="formulario" id="form" name="formulario">
                         <ul id="progress">
                                 <li class="ativo">Informações</li>
+                                <li>Sistemas</li>
                                 <li>Detalhes técnicos</li>
                                 <li>Conclusão</li>
                         </ul>
                     <fieldset>
                         <h3>Algumas Informações</h3>
-                        <input type="text" name="documento_nome" placeholder="Nome documento"/>
-                        <input type="text" name="documento_versao" placeholder="Versão"/>
-                        <input type="text" name="documento_status" placeholder="Status"/>
-                        <button type="submit" name="next" class="next acao">Próxima</button> 
+                        <input type="text" required name="documento_nome" placeholder="Nome documento"/>
+                        <input type="text" required name="documento_versao" placeholder="Versão"/>
+                        <input type="text" required name="documento_status" placeholder="Status"/>
+                        <button type="button" name="next1" class="next acao">Próxima</button> 
+                    </fieldset>
+                    <fieldset>
+                        <h3>Sistemas</h3>
+                        <input type="text" required name="id_sisA" placeholder="ID Sistema A"/>
+                        <input type="text" name="sistema_nomeA" placeholder="Nome Sistema A"/>
+                        <input type="text" required name="id_sisB" placeholder="ID Sistema B"/>
+                        <input type="text" name="sistema_nomeB" placeholder="Nome Sistema B"/>
+                        <button type="button" name="prev" class="prev acao">Anterior</button> 
+                        <button type="button" name="next2" class="next acao">Próxima</button> 
                     </fieldset>
                     <fieldset>
                         <h3>Detalhes técnicos</h3>
-                        <input type="text" name="sistema_nomeA" placeholder="Nome Sistema A"/>
-                        <input type="text" name="sistema_nomeB" placeholder="Nome Sistema B"/>
-                        <input type="text" name="id_sisA" placeholder="ID Sistema A"/>
-                        <input type="text" name="id_sisB" placeholder="ID Sistema B"/>
-                        <button type="submit" name="prev" class="prev acao">Anterior</button> 
-                        <button type="submit" name="next" class="next acao">Próxima</button> 
+                        <input type="text" name="end_IP" placeholder="Endereço IP / Porta"/>
+                        <input type="text" name="nome_user" placeholder="Usuário de Sistema"/>
+                        <input type="text" name="dir" placeholder="Diretório"/>
+                        <input type="text" name="time" placeholder="Tempo de backup"/>
+                        <button type="button" name="prev" class="prev acao">Anterior</button> 
+                        <button type="button" name="next3" class="next acao">Próxima</button> 
                     </fieldset>
                     <fieldset>
                         <h3>Template</h3>
@@ -48,8 +63,8 @@
                           <option value="1">Blank</option>
                           <option value="2">Empresarial</option>
                         </select>
-                        <button type="submit" name="prev" class="prev acao">Anterior</button>
-                        <button type="submit" name="next" class="acao">Gerar</button> 
+                        <button type="button" name="prev" class="prev acao">Anterior</button>
+                        <button type="button" name="next" class="acao">Gerar</button> 
                     </fieldset>
                 </form>    
         </div>
